@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Scanner;
 
 /**
- * Created by aux-146 on 12/7/18.
+ * Created by danushkaf on 12/7/18.
  */
 public class RansomNotes {
     // Complete the checkMagazine function below.

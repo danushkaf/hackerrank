@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 /**
- * Created by aux-146 on 12/5/18.
+ * Created by danushkaf on 12/5/18.
  */
 public class MinimumSwaps {
     // Complete the minimumSwaps function below.

@@ -6,7 +6,7 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 /**
- * Created by aux-146 on 12/7/18.
+ * Created by danushkaf on 12/7/18.
  */
 public class TwoStrings {
     // Complete the twoStrings function below.

@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 /**
- * Created by aux-146 on 12/5/18.
+ * Created by danushkaf on 12/5/18.
  */
 public class NewYearChaos {
     // Complete the minimumBribes function below.

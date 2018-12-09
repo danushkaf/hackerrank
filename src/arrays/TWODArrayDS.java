@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.util.Scanner;
 
 /**
- * Created by aux-146 on 12/5/18.
+ * Created by danushkaf on 12/5/18.
  */
 public class TWODArrayDS {
     // Complete the hourglassSum function below.
