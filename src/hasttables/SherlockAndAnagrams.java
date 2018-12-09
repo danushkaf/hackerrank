@@ -1,7 +1,12 @@
 package hasttables;
 
 import java.io.IOException;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
 /**
  * Created by danushkaf on 12/9/18.
@@ -9,7 +14,28 @@ import java.util.Scanner;
 public class SherlockAndAnagrams {
     // Complete the sherlockAndAnagrams function below.
     static int sherlockAndAnagrams(String s) {
-        return 0;
+        Map<List<Character>, Integer> substringMap = new HashMap<>();
+        int count = 0;
+        for (int i = 0 ; i < s.length() ; i++) {
+            for (int j = i ; j < s.length() ; j++) {
+                String substring = s.substring(i, j + 1);
+                List<Character> collect = substring.chars().parallel()
+                                                           .mapToObj(e -> (char) e)
+                                                           .collect(Collectors.toList());
+                Collections.sort(collect);
+                if (substringMap.containsKey(collect)) {
+                    int number = substringMap.get(collect);
+                    substringMap.put(collect, ++ number);
+                    continue;
+                }
+                substringMap.put(collect, 1);
+            }
+        }
+        for (Integer localCount : substringMap.values()) {
+            int triangular = (localCount) * (localCount - 1) / 2;
+            count += triangular;
+        }
+        return count;
     }
 
     private static final Scanner scanner = new Scanner(System.in);
