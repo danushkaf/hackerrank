@@ -1,8 +1,7 @@
 package hasttables;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Scanner;
 
 /**
  * Created by danushkaf on 12/9/18.
@@ -10,14 +9,13 @@ import java.io.IOException;
 public class SherlockAndAnagrams {
     // Complete the sherlockAndAnagrams function below.
     static int sherlockAndAnagrams(String s) {
-
-
+        return 0;
     }
 
     private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) throws IOException {
-        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
+//        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
 
         int q = scanner.nextInt();
         scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
@@ -27,11 +25,12 @@ public class SherlockAndAnagrams {
 
             int result = sherlockAndAnagrams(s);
 
-            bufferedWriter.write(String.valueOf(result));
-            bufferedWriter.newLine();
+//            bufferedWriter.write(String.valueOf(result));
+//            bufferedWriter.newLine();
+            System.out.println(result);
         }
 
-        bufferedWriter.close();
+//        bufferedWriter.close();
 
         scanner.close();
     }
