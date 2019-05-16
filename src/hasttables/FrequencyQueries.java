@@ -34,9 +34,17 @@ public class FrequencyQueries {
                 } else {
                     count = collect.get(queryValue);
                 }
+                boolean containsCountOrig = countToNumbers.containsKey(count);
+                Set<Integer> countToNumSet;
+                if (!containsCountOrig) {
+                    countToNumSet = new HashSet<>();
+                } else {
+                    countToNumSet = countToNumbers.get(count);
+                }
+                countToNumSet.remove(queryValue);
+                countToNumbers.put(count, countToNumSet);
                 collect.put(queryValue, ++count);
                 boolean containsCount = countToNumbers.containsKey(count);
-                Set<Integer> countToNumSet;
                 if (!containsCount) {
                     countToNumSet = new HashSet<>();
                 } else {
@@ -58,7 +66,12 @@ public class FrequencyQueries {
                     }
                     countToNumSet.remove(queryValue);
                     countToNumbers.put(count, countToNumSet);
-                    collect.put(queryValue, --count);
+                    --count;
+                    if (count == 0) {
+                        collect.remove(queryValue);
+                    } else {
+                        collect.put(queryValue, count);
+                    }
                     boolean containsCount = countToNumbers.containsKey(count);
                     if (!containsCount) {
                         countToNumSet = new HashSet<>();
